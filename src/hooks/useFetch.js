@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 
 const localCache = {};
 
-export const useFecth = (url) => {
+export const useFetch = (url) => {
     //Estado inicial
     const [state, setState] = useState({
         data: null,

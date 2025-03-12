@@ -5,6 +5,7 @@ export const TodoItem = ({todo, onDeleteTodo, onToggleTodo}) => {
                 //Tachamos el elementos cuando el done está en true
                 className={`align-self-center ${ (todo.done) ? 'text-decoration-line-through': ''} `}
                 onClick={() => onToggleTodo(todo.id)}
+                aria-label="span"
             >
                 {todo.description}
             </span>
