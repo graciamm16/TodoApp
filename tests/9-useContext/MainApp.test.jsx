@@ -10,6 +10,29 @@ describe('Pruebas en <MainApp/>', () => {
             </MemoryRouter>   
         );
 
-        screen.debug();
+        // screen.debug();
+        expect(screen.getByText('HomePage')).toBeTruthy();
+    });
+
+    test('Debe mostrar el LoginPage', () => {
+        render(
+            <MemoryRouter initialEntries={['/login']}>
+                <MainApp/>
+            </MemoryRouter>   
+        );
+
+        // screen.debug();
+        expect(screen.getByText('LoginPage')).toBeTruthy();
+    });
+
+    test('Debe mostrar el AboutPage', () => {
+        render(
+            <MemoryRouter initialEntries={['/about']}>
+                <MainApp/>
+            </MemoryRouter>   
+        );
+
+        // screen.debug();
+        expect(screen.getByText('AboutPage')).toBeTruthy();
     });
 });
